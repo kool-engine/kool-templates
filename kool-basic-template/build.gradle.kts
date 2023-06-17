@@ -3,7 +3,7 @@
 import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalDistributionDsl
 
 plugins {
-    kotlin("multiplatform") version "1.8.20"
+    kotlin("multiplatform") version "1.8.22"
 }
 
 repositories {
@@ -28,15 +28,22 @@ kotlin {
     }
     
     sourceSets {
+        // Choose your kool version:
+        val koolVersion = "0.11.0"              // latest stable version
+        //val koolVersion = "0.12.0-SNAPSHOT"   // newer but minor breaking changes might occur from time to time
+
+        // JVM target platforms, you can remove entries from the list in case you want to target
+        // only a specific platform
+        val targetPlatforms = listOf("natives-windows", "natives-linux", "natives-macos")
+
         val commonMain by getting {
             dependencies {
                 // add additional kotlin multi-platform dependencies here...
 
-                // kool dependencies - choose your version:
-                val koolVersion = "0.11.0"              // stable version
-                //val koolVersion = "0.12.0-SNAPSHOT"   // newer but minor breaking changes might occur from time to time
                 implementation("de.fabmax.kool:kool-core:$koolVersion")
                 implementation("de.fabmax.kool:kool-physics:$koolVersion")
+
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
             }
         }
 
@@ -44,13 +51,22 @@ kotlin {
             dependencies {
                 // add additional jvm-specific dependencies here...
 
-                // add dependencies for required lwjgl runtime libs
-                val platform = "natives-windows"    // and / or "natives-linux", "natives-macos"
-                val lwjglVersion = "3.3.2"
-                listOf("glfw", "opengl", "jemalloc", "nfd", "stb", "vma", "shaderc").forEach { lib ->
-                    runtimeOnly("org.lwjgl:lwjgl-$lib:$lwjglVersion:$platform")
+                // add required runtime libraries for lwjgl and physx-jni
+                for (platform in targetPlatforms) {
+                    // lwjgl runtime libs
+                    val lwjglVersion = "3.3.2"
+                    listOf("glfw", "opengl", "jemalloc", "nfd", "stb", "vma", "shaderc").forEach { lib ->
+                        runtimeOnly("org.lwjgl:lwjgl-$lib:$lwjglVersion:$platform")
+                    }
+                    runtimeOnly("org.lwjgl:lwjgl:$lwjglVersion:$platform")
+
+                    // physx-jni runtime libs - these have to match the physx-jni version used by kool-physics...
+                    val physxJniVersion = when (koolVersion) {
+                        "0.11.0" -> "2.0.5"
+                        else -> "2.0.6"
+                    }
+                    runtimeOnly("de.fabmax:physx-jni:$physxJniVersion:$platform")
                 }
-                runtimeOnly("org.lwjgl:lwjgl:$lwjglVersion:$platform")
             }
         }
         
