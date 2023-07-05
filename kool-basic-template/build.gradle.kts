@@ -30,7 +30,7 @@ kotlin {
     sourceSets {
         // Choose your kool version:
         val koolVersion = "0.11.0"              // latest stable version
-        //val koolVersion = "0.12.0-SNAPSHOT"   // newer but minor breaking changes might occur from time to time
+        //val koolVersion = "0.12.1-SNAPSHOT"   // newer but minor breaking changes might occur from time to time
 
         // JVM target platforms, you can remove entries from the list in case you want to target
         // only a specific platform
@@ -63,7 +63,7 @@ kotlin {
                     // physx-jni runtime libs - these have to match the physx-jni version used by kool-physics...
                     val physxJniVersion = when (koolVersion) {
                         "0.11.0" -> "2.0.5"
-                        else -> "2.0.6"
+                        else -> "2.2.1"
                     }
                     runtimeOnly("de.fabmax:physx-jni:$physxJniVersion:$platform")
                 }
