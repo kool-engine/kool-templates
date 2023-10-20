@@ -127,7 +127,7 @@ task("runEditor", JavaExec::class) {
 
     val editorConfig = configurations.getByName("jvmEditorRuntimeClasspath").copyRecursive()
 
-    classpath = editorConfig.fileCollection { true } + files("$projectDir/build/classes/kotlin/jvm/editor")
+    classpath = editorConfig.fileCollection { true } + layout.buildDirectory.files("classes/kotlin/jvm/editor")
     mainClass.set("EditorLauncherKt")
     workingDir = File(projectDir, ".editor")
 

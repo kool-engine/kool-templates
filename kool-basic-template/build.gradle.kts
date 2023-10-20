@@ -20,9 +20,9 @@ kotlin {
         binaries.executable()
         browser {
             @OptIn(ExperimentalDistributionDsl::class)
-            distribution {
-                directory = File("${rootDir}/dist/js")
-            }
+            distribution(Action {
+                outputDirectory.set(File("${rootDir}/dist/js"))
+            })
         }
     }
     
@@ -88,12 +88,12 @@ task("runnableJar", Jar::class) {
     val jvmConfig = configurations.getByName("jvmRuntimeClasspath").copyRecursive()
     from(
         jvmConfig.fileCollection { true }.files.map { if (it.isDirectory) it else zipTree(it) },
-        files("$buildDir/classes/kotlin/jvm/main")
+        layout.buildDirectory.files("classes/kotlin/jvm/main")
     )
 
     doLast {
         copy {
-            from("$buildDir/libs/${archiveBaseName.get()}-runnable.jar")
+            from(layout.buildDirectory.file("libs/${archiveBaseName.get()}-runnable.jar"))
             into("${rootDir}/dist/jvm")
         }
     }
@@ -104,7 +104,7 @@ task("launch", JavaExec::class) {
     dependsOn("jvmMainClasses")
 
     val jvmConfig = configurations.getByName("jvmRuntimeClasspath").copyRecursive()
-    classpath = jvmConfig.fileCollection { true } + files("$buildDir/classes/kotlin/jvm/main")
+    classpath = jvmConfig.fileCollection { true } + layout.buildDirectory.files("classes/kotlin/jvm/main")
     mainClass.set("LauncherKt")
 }
 
