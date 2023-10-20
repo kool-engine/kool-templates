@@ -3,11 +3,10 @@
 import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalDistributionDsl
 
 plugins {
-    kotlin("multiplatform") version "1.8.22"
+    kotlin("multiplatform") version "1.9.10"
 }
 
 repositories {
-    mavenLocal()
     mavenCentral()
     maven("https://oss.sonatype.org/content/repositories/snapshots")
 }
@@ -29,8 +28,11 @@ kotlin {
     
     sourceSets {
         // Choose your kool version:
-        val koolVersion = "0.11.0"              // latest stable version
-        //val koolVersion = "0.12.1-SNAPSHOT"   // newer but minor breaking changes might occur from time to time
+        val koolVersion = "0.12.1"              // latest stable version
+        //val koolVersion = "0.13.0-SNAPSHOT"   // newer but minor breaking changes might occur from time to time
+
+        val lwjglVersion = "3.3.3"
+        val physxJniVersion = "2.3.1"
 
         // JVM target platforms, you can remove entries from the list in case you want to target
         // only a specific platform
@@ -54,17 +56,12 @@ kotlin {
                 // add required runtime libraries for lwjgl and physx-jni
                 for (platform in targetPlatforms) {
                     // lwjgl runtime libs
-                    val lwjglVersion = "3.3.2"
+                    runtimeOnly("org.lwjgl:lwjgl:$lwjglVersion:$platform")
                     listOf("glfw", "opengl", "jemalloc", "nfd", "stb", "vma", "shaderc").forEach { lib ->
                         runtimeOnly("org.lwjgl:lwjgl-$lib:$lwjglVersion:$platform")
                     }
-                    runtimeOnly("org.lwjgl:lwjgl:$lwjglVersion:$platform")
 
-                    // physx-jni runtime libs - these have to match the physx-jni version used by kool-physics...
-                    val physxJniVersion = when (koolVersion) {
-                        "0.11.0" -> "2.0.5"
-                        else -> "2.2.1"
-                    }
+                    // physx-jni runtime libs
                     runtimeOnly("de.fabmax:physx-jni:$physxJniVersion:$platform")
                 }
             }
