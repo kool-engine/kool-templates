@@ -2,6 +2,7 @@ package template
 
 import de.fabmax.kool.KoolContext
 import de.fabmax.kool.math.Vec3f
+import de.fabmax.kool.math.deg
 import de.fabmax.kool.modules.ksl.KslPbrShader
 import de.fabmax.kool.scene.addColorMesh
 import de.fabmax.kool.scene.defaultOrbitCamera
@@ -29,8 +30,8 @@ fun launchApp(ctx: KoolContext) {
                 }
             }
             onUpdate {
-                // called on each frame: spins the cube around its x-axis
-                transform.rotate(Time.deltaT * 45f, Vec3f.X_AXIS)
+                // called on each frame: spins the cube around its x-axis by 45 degrees per second
+                transform.rotate(45f.deg * Time.deltaT, Vec3f.X_AXIS)
             }
             // assign a shader, which uses the vertex color info
             shader = KslPbrShader {

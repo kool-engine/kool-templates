@@ -1,5 +1,5 @@
 import de.fabmax.kool.KoolApplication
-import de.fabmax.kool.KoolConfig
+import de.fabmax.kool.KoolConfigJvm
 import de.fabmax.kool.editor.KoolEditor
 import de.fabmax.kool.editor.ProjectPaths
 
@@ -12,7 +12,7 @@ fun main() {
     // by default editor working dir is in $projectDir/.editor -> project root path is the parent directory
     val paths = ProjectPaths("..", gradleRootDir = "..", gradleBuildTask = "jvmMainClasses")
     KoolApplication(
-        KoolConfig(
+        KoolConfigJvm(
             windowTitle = "Kool Editor",
             assetPath = paths.assetsBasePath,
             showWindowOnStart = false

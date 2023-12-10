@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalDistributionDsl
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
-    kotlin("multiplatform") version "1.9.10"
+    kotlin("multiplatform") version "1.9.21"
 }
 
 repositories {
@@ -20,20 +20,18 @@ kotlin {
         binaries.executable()
         browser {
             @OptIn(ExperimentalDistributionDsl::class)
-            distribution(Action {
+            distribution {
                 outputDirectory.set(File("${projectDir}/dist/js"))
-            })
-            commonWebpackConfig(Action {
+            }
+            commonWebpackConfig {
                 //mode = KotlinWebpackConfig.Mode.PRODUCTION
                 mode = KotlinWebpackConfig.Mode.DEVELOPMENT
-            })
+            }
         }
     }
 
     sourceSets {
-        // Choose your kool version:
-        val koolVersion = "0.12.1"              // latest stable version
-        //val koolVersion = "0.13.0-SNAPSHOT"   // newer but minor breaking changes might occur from time to time
+        val koolVersion = "0.13.0"
 
         val lwjglVersion = "3.3.3"
         val physxJniVersion = "2.3.1"
