@@ -12,7 +12,7 @@
           "type": "de.fabmax.kool.editor.data.SceneBackgroundComponentData",
           "sceneBackground": {
             "type": "de.fabmax.kool.editor.data.SceneBackgroundData.Hdri",
-            "hdriPath": "assets/textures/hdri/circus_arena_1k.rgbe.png",
+            "hdriPath": "/textures/hdri/circus_arena_1k.rgbe.png",
             "skyLod": 2.0
           }
         },
@@ -109,26 +109,26 @@
       "components": [
         {
           "type": "de.fabmax.kool.editor.data.ModelComponentData",
-          "modelPath": "assets/models/bunny.gltf.gz"
+          "modelPath": "/models/bunny.gltf.gz"
         },
         {
           "type": "de.fabmax.kool.editor.data.TransformComponentData",
           "transform": {
             "position": {
-              "x": -4.336,
+              "x": -3.2363407611846924,
               "y": 0.0,
-              "z": 2.931598663330078
+              "z": 3.104377508163452
             },
             "rotation": {
               "x": 0.0,
-              "y": 0.0,
+              "y": 0.3349153399467468,
               "z": 0.0,
-              "w": 1.0
+              "w": 0.9422482252120972
             },
             "scale": {
-              "x": 0.5,
+              "x": 0.4999999701976776,
               "y": 0.5,
-              "z": 0.5
+              "z": 0.4999999701976776
             }
           }
         },
@@ -144,7 +144,7 @@
       "components": [
         {
           "type": "de.fabmax.kool.editor.data.ModelComponentData",
-          "modelPath": "assets/models/teapot.gltf.gz"
+          "modelPath": "/models/teapot.gltf.gz"
         },
         {
           "type": "de.fabmax.kool.editor.data.TransformComponentData",
@@ -262,8 +262,7 @@
           "type": "de.fabmax.kool.editor.data.ShadowMapComponentData",
           "shadowMap": {
             "type": "de.fabmax.kool.editor.data.ShadowMapTypeData.Single",
-            "mapInfo": {
-            }
+            "mapInfo": {}
           }
         },
         {
@@ -326,8 +325,7 @@
           "type": "de.fabmax.kool.editor.data.ShadowMapComponentData",
           "shadowMap": {
             "type": "de.fabmax.kool.editor.data.ShadowMapTypeData.Single",
-            "mapInfo": {
-            }
+            "mapInfo": {}
           }
         }
       ]
@@ -383,7 +381,7 @@
       "components": [
         {
           "type": "de.fabmax.kool.editor.data.ModelComponentData",
-          "modelPath": "assets/models/player.glb.gz",
+          "modelPath": "/models/player.glb.gz",
           "animationIndex": 2
         },
         {
@@ -514,15 +512,15 @@
           "type": "de.fabmax.kool.editor.data.TransformComponentData",
           "transform": {
             "position": {
-              "x": 1.393658388076011,
+              "x": 2.6399188561768576,
               "y": 3.1044723423220932,
-              "z": -1.3972782943216595
+              "z": 1.0052032822741594
             },
             "rotation": {
-              "x": -0.10134762213378376,
-              "y": 0.1315530807219978,
-              "z": 0.19847913794957395,
-              "w": 0.9659339926926546
+              "x": -0.04367816744918868,
+              "y": 0.45439139321251615,
+              "z": -0.715683606603527,
+              "w": 0.5285997112197925
             },
             "scale": {
               "x": 1.0,
@@ -693,11 +691,11 @@
         "type": "de.fabmax.kool.editor.data.PbrShaderData",
         "baseColor": {
           "type": "de.fabmax.kool.editor.data.MapAttribute",
-          "mapPath": "assets/textures/materials/TilesOnyxOpaloBlack001/TilesOnyxOpaloBlack001_COL_2K.jpg"
+          "mapPath": "/textures/materials/TilesOnyxOpaloBlack001/TilesOnyxOpaloBlack001_COL_2K.jpg"
         },
         "roughness": {
           "type": "de.fabmax.kool.editor.data.MapAttribute",
-          "mapPath": "assets/textures/materials/TilesOnyxOpaloBlack001/TilesOnyxOpaloBlack001_REFL_2K.jpg"
+          "mapPath": "/textures/materials/TilesOnyxOpaloBlack001/TilesOnyxOpaloBlack001_REFL_2K.jpg"
         },
         "metallic": {
           "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
@@ -713,7 +711,7 @@
           }
         },
         "normalMap": {
-          "mapPath": "assets/textures/materials/TilesOnyxOpaloBlack001/TilesOnyxOpaloBlack001_NRM_2K.jpg"
+          "mapPath": "/textures/materials/TilesOnyxOpaloBlack001/TilesOnyxOpaloBlack001_NRM_2K.jpg"
         }
       }
     },
@@ -790,7 +788,7 @@
         "type": "de.fabmax.kool.editor.data.PbrShaderData",
         "baseColor": {
           "type": "de.fabmax.kool.editor.data.MapAttribute",
-          "mapPath": "assets/textures/materials/tile_flat/tiles_flat_fine.png"
+          "mapPath": "/textures/materials/tile_flat/tiles_flat_fine.png"
         },
         "roughness": {
           "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
@@ -810,7 +808,7 @@
           }
         },
         "normalMap": {
-          "mapPath": "assets/textures/materials/tile_flat/tiles_flat_fine_normal.png"
+          "mapPath": "/textures/materials/tile_flat/tiles_flat_fine_normal.png"
         }
       }
     },
@@ -821,7 +819,7 @@
         "type": "de.fabmax.kool.editor.data.PbrShaderData",
         "baseColor": {
           "type": "de.fabmax.kool.editor.data.MapAttribute",
-          "mapPath": "assets/textures/uv_checker_map.png"
+          "mapPath": "/textures/uv_checker_map.jpg"
         },
         "roughness": {
           "type": "de.fabmax.kool.editor.data.ConstValueAttribute",

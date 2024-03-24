@@ -1,5 +1,5 @@
 import de.fabmax.kool.KoolApplication
-import de.fabmax.kool.KoolConfig
+import de.fabmax.kool.KoolConfigJvm
 import template.launchApp
 
 /**
@@ -7,7 +7,7 @@ import template.launchApp
  * forwards it to the common-code launcher.
  */
 fun main() = KoolApplication(
-    config = KoolConfig(
+    config = KoolConfigJvm(
         windowTitle = "kool Template App"
     )
 ) { ctx ->

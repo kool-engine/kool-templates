@@ -27,7 +27,7 @@ unfortunately, documentation is still barely existing (but you are welcome to co
 You can start the project right away out of your IDE or via gradle from a terminal inside the `kool-basic-template`
 directory:
 ```shell
-./gradlew launch
+./gradlew runApp
 ```
 
 ## How to package

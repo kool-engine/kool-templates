@@ -2,10 +2,11 @@ import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalDistributionDsl
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
-    kotlin("multiplatform") version "1.9.10"
+    kotlin("multiplatform") version "1.9.22"
 }
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven("https://oss.sonatype.org/content/repositories/snapshots")
 }
@@ -20,23 +21,20 @@ kotlin {
         binaries.executable()
         browser {
             @OptIn(ExperimentalDistributionDsl::class)
-            distribution(Action {
+            distribution {
                 outputDirectory.set(File("${projectDir}/dist/js"))
-            })
-            commonWebpackConfig(Action {
+            }
+            commonWebpackConfig {
                 //mode = KotlinWebpackConfig.Mode.PRODUCTION
                 mode = KotlinWebpackConfig.Mode.DEVELOPMENT
-            })
+            }
         }
     }
 
     sourceSets {
-        // Choose your kool version:
-        val koolVersion = "0.12.1"              // latest stable version
-        //val koolVersion = "0.13.0-SNAPSHOT"   // newer but minor breaking changes might occur from time to time
-
+        val koolVersion = "0.14.0"
         val lwjglVersion = "3.3.3"
-        val physxJniVersion = "2.3.1"
+        val physxJniVersion = "2.3.2"
 
         // JVM target platforms, you can remove entries from the list in case you want to target
         // only a specific platform
@@ -96,22 +94,6 @@ kotlin {
     }
 }
 
-tasks["jsBrowserDistribution"].doLast {
-    // create asset browser index json
-    val baseDir = File("$projectDir/src/commonMain/resources")
-    File("${projectDir}/dist/js/available-assets.json").writer().use { outWriter ->
-        val assetPaths = mutableListOf<String>()
-        fileTree(baseDir).visit {
-            if (path.startsWith("assets")) {
-                assetPaths.add(path)
-            }
-        }
-        outWriter.appendLine("[")
-        outWriter.append(assetPaths.joinToString(separator = ",\n") { "  \"${it.replace('\\', '/')}\"" })
-        outWriter.append("\n]")
-    }
-}
-
 configurations.filter { "editor" in it.name }.forEach {
     // editor related configurations need some custom attribute to distinguish them from regular jvm configs
     it.attributes.attribute(Attribute.of("de.fabmax.kool-editor", String::class.java), "editor")
@@ -134,4 +116,19 @@ task("runEditor", JavaExec::class) {
     if (!workingDir.exists()) {
         workingDir.mkdir()
     }
+}
+
+task("runApp", JavaExec::class) {
+    group = "app"
+    dependsOn("build")
+
+    val commonConfig = configurations.getByName("commonMainImplementation").copyRecursive()
+    val jvmConfig = configurations.getByName("jvmRuntimeClasspath").copyRecursive()
+    val cp = jvmConfig.fileCollection { true } +
+            commonConfig.fileCollection { true } +
+            layout.buildDirectory.files("classes/kotlin/jvm/main") +
+            layout.buildDirectory.files("processedResources/jvm/main")
+    classpath = cp
+
+    mainClass.set("de.fabmax.kool.app.AppLauncherKt")
 }

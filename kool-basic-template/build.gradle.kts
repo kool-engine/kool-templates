@@ -1,9 +1,7 @@
-@file:Suppress("UNUSED_VARIABLE")
-
 import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalDistributionDsl
 
 plugins {
-    kotlin("multiplatform") version "1.9.10"
+    kotlin("multiplatform") version "1.9.22"
 }
 
 repositories {
@@ -20,17 +18,15 @@ kotlin {
         binaries.executable()
         browser {
             @OptIn(ExperimentalDistributionDsl::class)
-            distribution(Action {
+            distribution {
                 outputDirectory.set(File("${rootDir}/dist/js"))
-            })
+            }
         }
     }
     
     sourceSets {
         // Choose your kool version:
-        val koolVersion = "0.12.1"              // latest stable version
-        //val koolVersion = "0.13.0-SNAPSHOT"   // newer but minor breaking changes might occur from time to time
-
+        val koolVersion = "0.14.0"
         val lwjglVersion = "3.3.3"
         val physxJniVersion = "2.3.1"
 
@@ -45,7 +41,7 @@ kotlin {
                 implementation("de.fabmax.kool:kool-core:$koolVersion")
                 implementation("de.fabmax.kool:kool-physics:$koolVersion")
 
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
             }
         }
 
@@ -85,8 +81,10 @@ task("runnableJar", Jar::class) {
         attributes["Main-Class"] = "LauncherKt"
     }
 
+    val commonConfig = configurations.getByName("commonMainImplementation").copyRecursive()
     val jvmConfig = configurations.getByName("jvmRuntimeClasspath").copyRecursive()
     from(
+        commonConfig.fileCollection { true }.files.map { if (it.isDirectory) it else zipTree(it) },
         jvmConfig.fileCollection { true }.files.map { if (it.isDirectory) it else zipTree(it) },
         layout.buildDirectory.files("classes/kotlin/jvm/main")
     )
@@ -99,12 +97,15 @@ task("runnableJar", Jar::class) {
     }
 }
 
-task("launch", JavaExec::class) {
+task("runApp", JavaExec::class) {
     group = "app"
     dependsOn("jvmMainClasses")
 
-    val jvmConfig = configurations.getByName("jvmRuntimeClasspath").copyRecursive()
-    classpath = jvmConfig.fileCollection { true } + layout.buildDirectory.files("classes/kotlin/jvm/main")
+    classpath = configurations.getByName("jvmRuntimeClasspath").copyRecursive().fileCollection { true } +
+            configurations.getByName("commonMainImplementation").copyRecursive().fileCollection { true } +
+            layout.buildDirectory.files("classes/kotlin/jvm/main") +
+            layout.buildDirectory.files("processedResources/jvm/main")
+
     mainClass.set("LauncherKt")
 }
 
