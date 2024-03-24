@@ -106,12 +106,14 @@ task("runEditor", JavaExec::class) {
     group = "editor"
     dependsOn("jvmEditorClasses")
 
-    val editorConfig = configurations.getByName("jvmEditorRuntimeClasspath").copyRecursive()
+    classpath = layout.buildDirectory.files("classes/kotlin/jvm/editor")
+    configurations
+        .filter { it.name.startsWith("common") || it.name.startsWith("jvm") }
+        .map { it.copyRecursive().fileCollection { true } }
+        .forEach { classpath += it }
 
-    classpath = editorConfig.fileCollection { true } + layout.buildDirectory.files("classes/kotlin/jvm/editor")
     mainClass.set("EditorLauncherKt")
     workingDir = File(projectDir, ".editor")
-
     if (!workingDir.exists()) {
         workingDir.mkdir()
     }
@@ -121,13 +123,11 @@ task("runApp", JavaExec::class) {
     group = "app"
     dependsOn("build")
 
-    val commonConfig = configurations.getByName("commonMainImplementation").copyRecursive()
-    val jvmConfig = configurations.getByName("jvmRuntimeClasspath").copyRecursive()
-    val cp = jvmConfig.fileCollection { true } +
-            commonConfig.fileCollection { true } +
-            layout.buildDirectory.files("classes/kotlin/jvm/main") +
-            layout.buildDirectory.files("processedResources/jvm/main")
-    classpath = cp
+    classpath = layout.buildDirectory.files("classes/kotlin/jvm/main")
+    configurations
+        .filter { it.name.startsWith("common") || it.name.startsWith("jvm") }
+        .map { it.copyRecursive().fileCollection { true } }
+        .forEach { classpath += it }
 
     mainClass.set("de.fabmax.kool.app.AppLauncherKt")
 }
