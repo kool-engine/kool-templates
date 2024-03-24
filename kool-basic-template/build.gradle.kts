@@ -25,7 +25,6 @@ kotlin {
     }
     
     sourceSets {
-        // Choose your kool version:
         val koolVersion = "0.14.0"
         val lwjglVersion = "3.3.3"
         val physxJniVersion = "2.3.1"
@@ -81,13 +80,16 @@ task("runnableJar", Jar::class) {
         attributes["Main-Class"] = "LauncherKt"
     }
 
-    val commonConfig = configurations.getByName("commonMainImplementation").copyRecursive()
-    val jvmConfig = configurations.getByName("jvmRuntimeClasspath").copyRecursive()
-    from(
-        commonConfig.fileCollection { true }.files.map { if (it.isDirectory) it else zipTree(it) },
-        jvmConfig.fileCollection { true }.files.map { if (it.isDirectory) it else zipTree(it) },
-        layout.buildDirectory.files("classes/kotlin/jvm/main")
-    )
+    configurations
+        .asSequence()
+        .filter { it.name.startsWith("common") || it.name.startsWith("jvm") }
+        .map { it.copyRecursive().fileCollection { true } }
+        .flatten()
+        .distinct()
+        .filter { it.exists() }
+        .map { if (it.isDirectory) it else zipTree(it) }
+        .forEach { from(it) }
+    from(layout.buildDirectory.files("classes/kotlin/jvm/main"))
 
     doLast {
         copy {
@@ -101,10 +103,11 @@ task("runApp", JavaExec::class) {
     group = "app"
     dependsOn("jvmMainClasses")
 
-    classpath = configurations.getByName("jvmRuntimeClasspath").copyRecursive().fileCollection { true } +
-            configurations.getByName("commonMainImplementation").copyRecursive().fileCollection { true } +
-            layout.buildDirectory.files("classes/kotlin/jvm/main") +
-            layout.buildDirectory.files("processedResources/jvm/main")
+    classpath = layout.buildDirectory.files("classes/kotlin/jvm/main")
+    configurations
+        .filter { it.name.startsWith("common") || it.name.startsWith("jvm") }
+        .map { it.copyRecursive().fileCollection { true } }
+        .forEach { classpath += it }
 
     mainClass.set("LauncherKt")
 }

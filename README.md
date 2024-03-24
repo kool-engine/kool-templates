@@ -9,7 +9,7 @@ The project contains the minimum set of dependencies and launcher code to get yo
 
 For more info see the project's [README.md](kool-basic-template/README.md)
 
-## kool-basic-template
+## kool-editor-template
 
 Template project for creating a new editor-based application with kool.
 The editor is still in an early state and not super-useful yet, so consider this to be more

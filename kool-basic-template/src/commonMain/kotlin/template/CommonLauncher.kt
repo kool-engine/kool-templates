@@ -30,7 +30,7 @@ fun launchApp(ctx: KoolContext) {
                 }
             }
             onUpdate {
-                // called on each frame: spins the cube around its x-axis
+                // called on each frame: spins the cube around its x-axis by 45 degrees per second
                 transform.rotate(45f.deg * Time.deltaT, Vec3f.X_AXIS)
             }
             // assign a shader, which uses the vertex color info

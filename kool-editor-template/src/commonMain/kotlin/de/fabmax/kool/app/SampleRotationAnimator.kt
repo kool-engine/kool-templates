@@ -4,8 +4,8 @@ import de.fabmax.kool.editor.api.EditorInfo
 import de.fabmax.kool.editor.api.KoolBehavior
 import de.fabmax.kool.editor.components.TransformComponent
 import de.fabmax.kool.editor.data.Vec4Data
-import de.fabmax.kool.math.MutableMat3f
-import de.fabmax.kool.math.MutableQuatF
+import de.fabmax.kool.math.MutableMat3d
+import de.fabmax.kool.math.MutableQuatD
 import de.fabmax.kool.math.Vec3f
 import de.fabmax.kool.math.deg
 import de.fabmax.kool.util.Time
@@ -26,14 +26,13 @@ class SampleRotationAnimator : KoolBehavior() {
 
     override fun onUpdate() {
         val transformData = transform.transformState.value
-
-        val rot = MutableMat3f().rotate(transformData.rotation.toQuatF())
+        val rot = MutableMat3d().rotate(transformData.rotation.toQuatD())
         rot.rotate(
-            rotationSpeed.x.deg * Time.deltaT * speedMulti,
-            rotationSpeed.y.deg * Time.deltaT * speedMulti,
-            rotationSpeed.z.deg * Time.deltaT * speedMulti
+            (rotationSpeed.x.toDouble() * speedMulti * Time.deltaT).deg,
+            (rotationSpeed.y.toDouble() * speedMulti * Time.deltaT).deg,
+            (rotationSpeed.z.toDouble() * speedMulti * Time.deltaT).deg
         )
-        val quat = rot.getRotation(MutableQuatF())
+        val quat = rot.getRotation(MutableQuatD())
         transform.transformState.set(transformData.copy(rotation = Vec4Data(quat)))
     }
 }
