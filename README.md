@@ -16,3 +16,10 @@ The editor is still in an early state and not super-useful yet, so consider this
 a demo / test project.
 
 For more info see the project's [README.md](kool-editor-template/README.md)
+
+## kool-android-template
+
+Template project for creating a new Android app with kool.
+The project contains the minimum set of dependencies and launcher code to get you started. Also,
+kool for Android requires version `0.15.0-SNAPSHOT`, which is not yet publicly available. You need to clone
+the main [kool](https://github.com/fabmax/kool) repo and `publishToMavenLocal` the lib yourself for this to work.

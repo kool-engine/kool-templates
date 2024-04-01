@@ -1,0 +1,14 @@
+[versions]
+agp = "8.2.0"
+kotlin = "2.0.0-Beta5"
+kool = "0.15.0-SNAPSHOT"
+androidsvg = "1.4"
+
+[libraries]
+kool-core = { group = "de.fabmax.kool", name = "kool-core", version.ref = "kool" }
+androidsvg = { group = "com.caverock", name = "androidsvg-aar", version.ref = "androidsvg" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
