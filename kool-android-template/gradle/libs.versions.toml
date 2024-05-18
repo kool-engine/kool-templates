@@ -1,6 +1,6 @@
 [versions]
 agp = "8.2.0"
-kotlin = "2.0.0-Beta5"
+kotlin = "2.0.0-RC3"
 kool = "0.15.0-SNAPSHOT"
 androidsvg = "1.4"
 

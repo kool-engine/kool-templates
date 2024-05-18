@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalDistributionDsl
 
 plugins {
-    kotlin("multiplatform") version "1.9.22"
+    kotlin("multiplatform") version "2.0.0-RC3"
 }
 
 repositories {
@@ -11,9 +11,9 @@ repositories {
 
 kotlin {
     // kotlin multiplatform (jvm + js) setup:
-    jvm {
-        jvmToolchain(11)
-    }
+    jvm { }
+    jvmToolchain(11)
+
     js(IR) {
         binaries.executable()
         browser {

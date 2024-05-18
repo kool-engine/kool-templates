@@ -2,19 +2,20 @@ import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalDistributionDsl
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
-    kotlin("multiplatform") version "1.9.22"
+    kotlin("multiplatform") version "2.0.0-RC3"
 }
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven("https://oss.sonatype.org/content/repositories/snapshots")
 }
 
 kotlin {
     jvm {
-        jvmToolchain(11)
         compilations.create("editor")
     }
+    jvmToolchain(11)
 
     js(IR) {
         binaries.executable()
@@ -31,7 +32,7 @@ kotlin {
     }
 
     sourceSets {
-        val koolVersion = "0.14.0"
+        val koolVersion = "0.15.0-SNAPSHOT"
         val lwjglVersion = "3.3.3"
         val physxJniVersion = "2.3.2"
 
@@ -41,8 +42,7 @@ kotlin {
 
         val commonMain by getting {
             dependencies {
-                implementation("de.fabmax.kool:kool-core:$koolVersion")
-                implementation("de.fabmax.kool:kool-physics:$koolVersion")
+                implementation("de.fabmax.kool:kool-editor-model:$koolVersion")
             }
         }
         val commonTest by getting {

@@ -12,7 +12,7 @@ fun main() = KoolApplication(
         windowTitle = "Kool Editor",
         showWindowOnStart = false
     )
-) { ctx ->
+) {
     // by default editor working dir is in $projectDir/.editor -> project root path is the parent directory
     KoolEditor("..", ctx)
 }
