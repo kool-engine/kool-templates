@@ -1,0 +1,50 @@
+{
+  "id": 23,
+  "parentId": 5,
+  "settings": {
+    "name": "Yellow"
+  },
+  "order": 4,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MaterialComponentData",
+        "name": "Yellow",
+        "shaderData": {
+          "type": "de.fabmax.kool.editor.data.PbrShaderData",
+          "baseColor": {
+            "type": "de.fabmax.kool.editor.data.ConstColorAttribute",
+            "color": {
+              "r": 1.0,
+              "g": 0.49873802,
+              "b": 0.025683772,
+              "a": 1.0
+            }
+          },
+          "roughness": {
+            "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
+            "value": 0.5
+          },
+          "metallic": {
+            "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
+            "value": 0.0
+          },
+          "emission": {
+            "type": "de.fabmax.kool.editor.data.ConstColorAttribute",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData"
+      }
+    }
+  ]
+}

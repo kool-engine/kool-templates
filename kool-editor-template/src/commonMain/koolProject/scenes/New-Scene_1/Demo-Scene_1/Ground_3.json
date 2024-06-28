@@ -1,0 +1,51 @@
+{
+  "id": 3,
+  "parentId": 1,
+  "settings": {
+    "name": "Ground"
+  },
+  "order": 1,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MeshComponentData",
+        "shapes": [
+          {
+            "type": "de.fabmax.kool.editor.data.ShapeData.Rect",
+            "size": {
+              "x": 128.0,
+              "y": 128.0
+            },
+            "common": {
+              "uvScale": {
+                "x": 32.0,
+                "y": 32.0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData"
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MaterialReferenceComponentData",
+        "materialId": 8
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.RigidActorComponentData",
+        "shapes": [
+          {
+            "type": "de.fabmax.kool.editor.data.ShapeData.Plane"
+          }
+        ]
+      }
+    }
+  ]
+}

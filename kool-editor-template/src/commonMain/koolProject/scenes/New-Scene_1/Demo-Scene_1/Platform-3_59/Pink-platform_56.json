@@ -1,0 +1,89 @@
+{
+  "id": 56,
+  "parentId": 59,
+  "settings": {
+    "name": "Pink platform"
+  },
+  "order": 1,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MeshComponentData",
+        "shapes": [
+          {
+            "type": "de.fabmax.kool.editor.data.ShapeData.Box",
+            "size": {
+              "x": 7.0,
+              "y": 0.25,
+              "z": 3.0
+            }
+          }
+        ]
+      },
+      "displayOrder": 1
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MaterialReferenceComponentData",
+        "materialId": 60
+      },
+      "displayOrder": 2
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": 3.0,
+            "y": 7.999999046325684,
+            "z": 1.4809999465942383
+          },
+          "rotation": {
+            "x": 6.938893076726616E-18,
+            "y": 2.8951325383660495E-24,
+            "z": 1.065814188343445E-14,
+            "w": 1.0
+          },
+          "scale": {
+            "x": 0.9999995827674866,
+            "y": 0.9999995827674866,
+            "z": 1.0
+          }
+        }
+      },
+      "displayOrder": 0
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.RigidActorComponentData",
+        "actorType": "KINEMATIC",
+        "characterControllerHitBehavior": "RIDE"
+      },
+      "displayOrder": 3
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.BehaviorComponentData",
+        "behaviorClassName": "de.fabmax.kool.app.PlatformMoveController",
+        "propertyValues": {
+          "anchorA": {
+            "gameEntityRef": 61
+          },
+          "anchorB": {
+            "gameEntityRef": 62
+          },
+          "trigger": {
+            "behaviorRef": {
+              "entityId": 63,
+              "behaviorClassName": "TriggerHandler"
+            }
+          },
+          "speed": {
+            "f1": 1.0
+          }
+        }
+      },
+      "displayOrder": 4
+    }
+  ]
+}

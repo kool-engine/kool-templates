@@ -1,0 +1,51 @@
+{
+  "id": 51,
+  "parentId": 5,
+  "settings": {
+    "name": "Dark grey"
+  },
+  "order": 10,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MaterialComponentData",
+        "name": "Dark grey",
+        "shaderData": {
+          "type": "de.fabmax.kool.editor.data.PbrShaderData",
+          "baseColor": {
+            "type": "de.fabmax.kool.editor.data.ConstColorAttribute",
+            "color": {
+              "r": 0.055621367,
+              "g": 0.055621367,
+              "b": 0.055621367,
+              "a": 1.0
+            }
+          },
+          "roughness": {
+            "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
+            "value": 0.35999998
+          },
+          "metallic": {
+            "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
+            "value": 0.0
+          },
+          "emission": {
+            "type": "de.fabmax.kool.editor.data.ConstColorAttribute",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData"
+      },
+      "displayOrder": 0
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": 25,
+  "parentId": 5,
+  "settings": {
+    "name": "Green"
+  },
+  "order": 5,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MaterialComponentData",
+        "name": "Green",
+        "shaderData": {
+          "type": "de.fabmax.kool.editor.data.PbrShaderData",
+          "baseColor": {
+            "type": "de.fabmax.kool.editor.data.ConstColorAttribute",
+            "color": {
+              "r": 0.337246,
+              "g": 0.70270294,
+              "b": 0.004304338,
+              "a": 1.0
+            }
+          },
+          "roughness": {
+            "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
+            "value": 0.5
+          },
+          "metallic": {
+            "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
+            "value": 0.0
+          },
+          "emission": {
+            "type": "de.fabmax.kool.editor.data.ConstColorAttribute",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData"
+      }
+    }
+  ]
+}

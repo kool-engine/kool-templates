@@ -1,0 +1,52 @@
+{
+  "id": 8,
+  "parentId": 5,
+  "settings": {
+    "name": "Ground"
+  },
+  "order": 1,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MaterialComponentData",
+        "name": "Ground",
+        "shaderData": {
+          "type": "de.fabmax.kool.editor.data.PbrShaderData",
+          "baseColor": {
+            "type": "de.fabmax.kool.editor.data.MapAttribute",
+            "mapPath": "/textures/materials/tile_flat/tiles_flat_fine.png"
+          },
+          "roughness": {
+            "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
+            "value": 0.5
+          },
+          "metallic": {
+            "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
+            "value": 0.0
+          },
+          "emission": {
+            "type": "de.fabmax.kool.editor.data.ConstColorAttribute",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          },
+          "normalMap": {
+            "mapPath": "/textures/materials/tile_flat/tiles_flat_fine_normal.png"
+          },
+          "parallaxStrength": 0.05,
+          "genericSettings": {
+            "isCastingShadow": false
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData"
+      }
+    }
+  ]
+}

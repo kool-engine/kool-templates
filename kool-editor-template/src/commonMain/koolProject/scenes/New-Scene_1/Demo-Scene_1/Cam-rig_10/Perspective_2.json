@@ -1,0 +1,41 @@
+{
+  "id": 2,
+  "parentId": 10,
+  "settings": {
+    "name": "Perspective"
+  },
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.CameraComponentData",
+        "camera": {
+          "type": "de.fabmax.kool.editor.data.CameraTypeData.Perspective",
+          "clipFar": 100000.0
+        }
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": 0.0,
+            "y": 2.5,
+            "z": 5.0
+          },
+          "rotation": {
+            "x": -0.258819043636322,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.9659258127212524
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        }
+      }
+    }
+  ]
+}

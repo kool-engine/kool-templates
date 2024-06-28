@@ -1,0 +1,54 @@
+{
+  "id": 73,
+  "parentId": 1,
+  "settings": {
+    "name": "Bunny"
+  },
+  "order": 10,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": -10.304332733154297,
+            "y": 3.250252575526247E-6,
+            "z": 4.036109447479248
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.7880292534828186,
+            "z": 0.0,
+            "w": 0.6156377792358398
+          },
+          "scale": {
+            "x": 0.5279999923706055,
+            "y": 0.5279999923706055,
+            "z": 0.5279999923706055
+          }
+        }
+      },
+      "displayOrder": 0
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.ModelComponentData",
+        "modelPath": "/models/bunny.gltf.gz"
+      },
+      "displayOrder": 1
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MaterialReferenceComponentData",
+        "materialId": 72
+      },
+      "displayOrder": 2
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.RigidActorComponentData"
+      },
+      "displayOrder": 3
+    }
+  ]
+}

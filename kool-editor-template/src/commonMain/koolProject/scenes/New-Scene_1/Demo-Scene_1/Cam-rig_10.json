@@ -1,0 +1,53 @@
+{
+  "id": 10,
+  "parentId": 1,
+  "settings": {
+    "name": "Cam rig"
+  },
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": 1.6093250039261689E-7,
+            "y": -5.364415822661783E-8,
+            "z": 6.460483551025391
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 8.940696538672877E-8,
+            "w": 0.999999999999996
+          },
+          "scale": {
+            "x": 1.0000000596046537,
+            "y": 1.0000000596046537,
+            "z": 1.0
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.BehaviorComponentData",
+        "behaviorClassName": "de.fabmax.kool.app.CharacterCameraRig",
+        "propertyValues": {
+          "trackedCharacter": {
+            "componentRef": {
+              "entityId": 9,
+              "componentClassName": "CharacterControllerComponent"
+            }
+          },
+          "pivotPoint": {
+            "f3": {
+              "x": 0.0,
+              "y": 0.75,
+              "z": 0.0
+            }
+          }
+        }
+      }
+    }
+  ]
+}

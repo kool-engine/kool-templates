@@ -1,6 +1,7 @@
 import de.fabmax.kool.KoolApplication
 import de.fabmax.kool.KoolConfigJvm
 import de.fabmax.kool.editor.KoolEditor
+import de.fabmax.kool.platform.OsInfo
 
 /**
  * Editor launcher main function. It is recommended to run this by executing the gradle task ":runEditor". However,
@@ -10,7 +11,8 @@ import de.fabmax.kool.editor.KoolEditor
 fun main() = KoolApplication(
     KoolConfigJvm(
         windowTitle = "Kool Editor",
-        showWindowOnStart = false
+        showWindowOnStart = false,
+        isNoTitleBar = OsInfo.isWindows
     )
 ) {
     // by default editor working dir is in $projectDir/.editor -> project root path is the parent directory

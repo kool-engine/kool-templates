@@ -1,0 +1,34 @@
+{
+  "id": 61,
+  "parentId": 59,
+  "settings": {
+    "name": "Pink start"
+  },
+  "order": 4,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": 3.0,
+            "y": 8.0,
+            "z": 1.481
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        }
+      },
+      "displayOrder": 0
+    }
+  ]
+}

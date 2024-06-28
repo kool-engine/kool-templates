@@ -1,0 +1,89 @@
+{
+  "id": 26,
+  "parentId": 35,
+  "settings": {
+    "name": "Blue platform"
+  },
+  "order": 5,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MeshComponentData",
+        "shapes": [
+          {
+            "type": "de.fabmax.kool.editor.data.ShapeData.Box",
+            "size": {
+              "x": 2.0,
+              "y": 0.25,
+              "z": 2.0
+            }
+          }
+        ]
+      },
+      "displayOrder": 1
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MaterialReferenceComponentData",
+        "materialId": 50
+      },
+      "displayOrder": 2
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.RigidActorComponentData",
+        "actorType": "KINEMATIC",
+        "characterControllerHitBehavior": "RIDE"
+      },
+      "displayOrder": 3
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": 3.552713678800501E-15,
+            "y": 3.4999999999999987,
+            "z": -5.800000190734863
+          },
+          "rotation": {
+            "x": -2.134793906652937E-17,
+            "y": 6.617444900424223E-24,
+            "z": -2.481541837659083E-24,
+            "w": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 0.9999999999999998
+          }
+        }
+      },
+      "displayOrder": 0
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.BehaviorComponentData",
+        "behaviorClassName": "de.fabmax.kool.app.PlatformMoveController",
+        "propertyValues": {
+          "anchorA": {
+            "gameEntityRef": 27
+          },
+          "anchorB": {
+            "gameEntityRef": 28
+          },
+          "trigger": {
+            "behaviorRef": {
+              "entityId": 30,
+              "behaviorClassName": "TriggerHandler"
+            }
+          },
+          "speed": {
+            "f1": 5.0
+          }
+        }
+      },
+      "displayOrder": 4
+    }
+  ]
+}

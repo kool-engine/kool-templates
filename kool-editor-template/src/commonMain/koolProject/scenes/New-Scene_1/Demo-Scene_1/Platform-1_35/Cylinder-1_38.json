@@ -1,0 +1,61 @@
+{
+  "id": 38,
+  "parentId": 35,
+  "settings": {
+    "name": "Cylinder 1"
+  },
+  "order": 4,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MeshComponentData",
+        "shapes": [
+          {
+            "type": "de.fabmax.kool.editor.data.ShapeData.Cylinder",
+            "topRadius": 0.3,
+            "bottomRadius": 0.3,
+            "length": 3.4959999752044677
+          }
+        ]
+      },
+      "displayOrder": 1
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MaterialReferenceComponentData",
+        "materialId": 51
+      },
+      "displayOrder": 2
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": 3.552713678800501E-15,
+            "y": 1.715973258018494,
+            "z": 7.999999999999999
+          },
+          "rotation": {
+            "x": -7.930459516262827E-18,
+            "y": 2.632432978704767E-18,
+            "z": 0.7071068233333974,
+            "w": 0.7071067390396952
+          },
+          "scale": {
+            "x": 0.9999995231628489,
+            "y": 0.9999995231628488,
+            "z": 0.9999999999999998
+          }
+        }
+      },
+      "displayOrder": 0
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.RigidActorComponentData"
+      },
+      "displayOrder": 3
+    }
+  ]
+}

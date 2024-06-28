@@ -1,0 +1,88 @@
+{
+  "id": 39,
+  "parentId": 40,
+  "settings": {
+    "name": "Green platform"
+  },
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MeshComponentData",
+        "shapes": [
+          {
+            "type": "de.fabmax.kool.editor.data.ShapeData.Box",
+            "size": {
+              "x": 2.0,
+              "y": 0.25,
+              "z": 2.0
+            }
+          }
+        ]
+      },
+      "displayOrder": 1
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MaterialReferenceComponentData",
+        "materialId": 49
+      },
+      "displayOrder": 2
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.RigidActorComponentData",
+        "actorType": "KINEMATIC",
+        "characterControllerHitBehavior": "RIDE"
+      },
+      "displayOrder": 3
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": 0.0026604447048157454,
+            "y": 3.5,
+            "z": 1.7844319343566895
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        }
+      },
+      "displayOrder": 0
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.BehaviorComponentData",
+        "behaviorClassName": "de.fabmax.kool.app.PlatformMoveController",
+        "propertyValues": {
+          "anchorA": {
+            "gameEntityRef": 41
+          },
+          "anchorB": {
+            "gameEntityRef": 42
+          },
+          "speed": {
+            "f1": 3.0
+          },
+          "trigger": {
+            "behaviorRef": {
+              "entityId": 45,
+              "behaviorClassName": "TriggerHandler"
+            }
+          }
+        }
+      },
+      "displayOrder": 4
+    }
+  ]
+}

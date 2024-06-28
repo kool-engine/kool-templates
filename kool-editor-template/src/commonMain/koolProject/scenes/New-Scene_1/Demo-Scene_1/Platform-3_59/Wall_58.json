@@ -1,0 +1,63 @@
+{
+  "id": 58,
+  "parentId": 59,
+  "settings": {
+    "name": "Wall"
+  },
+  "order": 2,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MeshComponentData",
+        "shapes": [
+          {
+            "type": "de.fabmax.kool.editor.data.ShapeData.Box",
+            "size": {
+              "x": 0.25,
+              "y": 1.9999999696016313,
+              "z": 3.0
+            }
+          }
+        ]
+      },
+      "displayOrder": 1
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MaterialReferenceComponentData",
+        "materialId": 52
+      },
+      "displayOrder": 2
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": 0.007450580596923828,
+            "y": 9.176183463340836,
+            "z": 1.4812593460083008
+          },
+          "rotation": {
+            "x": 6.938893076726505E-18,
+            "y": 2.8951328095370466E-24,
+            "z": 1.065814167167663E-14,
+            "w": 1.0
+          },
+          "scale": {
+            "x": 0.9999995827674724,
+            "y": 0.9999995827674724,
+            "z": 1.0
+          }
+        }
+      },
+      "displayOrder": 0
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.RigidActorComponentData"
+      },
+      "displayOrder": 3
+    }
+  ]
+}

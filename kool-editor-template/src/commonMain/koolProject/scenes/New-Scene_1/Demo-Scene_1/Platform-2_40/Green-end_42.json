@@ -1,0 +1,34 @@
+{
+  "id": 42,
+  "parentId": 40,
+  "settings": {
+    "name": "Green end"
+  },
+  "order": 2,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": 0.0026602745056152344,
+            "y": 8.0,
+            "z": 2.7208948135375977
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        }
+      },
+      "displayOrder": 0
+    }
+  ]
+}

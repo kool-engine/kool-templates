@@ -1,8 +1,9 @@
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalDistributionDsl
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
-    kotlin("multiplatform") version "2.0.0-RC3"
+    kotlin("multiplatform") version "2.0.0"
 }
 
 repositories {
@@ -17,7 +18,7 @@ kotlin {
     }
     jvmToolchain(11)
 
-    js(IR) {
+    js {
         binaries.executable()
         browser {
             @OptIn(ExperimentalDistributionDsl::class)
@@ -29,16 +30,20 @@ kotlin {
                 mode = KotlinWebpackConfig.Mode.DEVELOPMENT
             }
         }
+        @OptIn(ExperimentalKotlinGradlePluginApi::class)
+        compilerOptions {
+            target.set("es2015")
+        }
     }
 
     sourceSets {
-        val koolVersion = "0.15.0-SNAPSHOT"
+        val koolVersion = "0.15.0"
         val lwjglVersion = "3.3.3"
-        val physxJniVersion = "2.3.2"
+        val physxJniVersion = "2.4.0"
 
         // JVM target platforms, you can remove entries from the list in case you want to target
         // only a specific platform
-        val targetPlatforms = listOf("natives-windows", "natives-linux", "natives-macos")
+        val targetPlatforms = listOf("natives-windows", "natives-linux", "natives-macos", "natives-macos-arm64")
 
         val commonMain by getting {
             dependencies {
@@ -121,7 +126,7 @@ task("runEditor", JavaExec::class) {
 
 task("runApp", JavaExec::class) {
     group = "app"
-    dependsOn("build")
+    dependsOn("jvmMainClasses")
 
     classpath = layout.buildDirectory.files("classes/kotlin/jvm/main")
     configurations

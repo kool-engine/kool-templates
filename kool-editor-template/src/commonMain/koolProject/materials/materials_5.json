@@ -1,0 +1,19 @@
+{
+  "id": 5,
+  "parentId": null,
+  "settings": {
+    "name": "materials"
+  },
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.SceneComponentData"
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData"
+      }
+    }
+  ]
+}

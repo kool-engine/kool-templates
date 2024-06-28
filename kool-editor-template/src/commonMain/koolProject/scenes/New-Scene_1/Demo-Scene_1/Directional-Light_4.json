@@ -1,0 +1,68 @@
+{
+  "id": 4,
+  "parentId": 1,
+  "settings": {
+    "name": "Directional-Light"
+  },
+  "order": 2,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.DiscreteLightComponentData",
+        "light": {
+          "type": "de.fabmax.kool.editor.data.LightTypeData.Directional",
+          "color": {
+            "r": 1.0,
+            "g": 0.8322391,
+            "b": 0.6786654,
+            "a": 1.0
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": 13.686156272888184,
+            "y": 18.601343154907227,
+            "z": 15.679293632507324
+          },
+          "rotation": {
+            "x": 0.22446666657924652,
+            "y": 0.0816991776227951,
+            "z": -0.9124894142150879,
+            "w": 0.3321189880371094
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.000000238418579,
+            "z": 1.0
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.ShadowMapComponentData",
+        "shadowMap": {
+          "type": "de.fabmax.kool.editor.data.ShadowMapTypeData.Cascaded",
+          "mapInfos": [
+            {
+              "rangeNear": 0.001,
+              "rangeFar": 0.05
+            },
+            {
+              "rangeNear": 0.05,
+              "rangeFar": 0.25
+            },
+            {
+              "rangeNear": 0.25
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

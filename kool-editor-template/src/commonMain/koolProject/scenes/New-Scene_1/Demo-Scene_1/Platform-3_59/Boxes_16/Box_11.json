@@ -1,0 +1,54 @@
+{
+  "id": 11,
+  "parentId": 16,
+  "settings": {
+    "name": "Box"
+  },
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MeshComponentData",
+        "shapes": [
+          {
+            "type": "de.fabmax.kool.editor.data.ShapeData.Box"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MaterialReferenceComponentData",
+        "materialId": 12
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": -2.357027530670166,
+            "y": 0.5,
+            "z": -0.0010819747112691402
+          },
+          "rotation": {
+            "x": 7.395569223205459E-32,
+            "y": 1.4791136095422217E-31,
+            "z": 6.352748114149211E-22,
+            "w": 1.0
+          },
+          "scale": {
+            "x": 0.9999998211860657,
+            "y": 0.9999998211860657,
+            "z": 1.0
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.RigidActorComponentData",
+        "actorType": "DYNAMIC"
+      }
+    }
+  ]
+}

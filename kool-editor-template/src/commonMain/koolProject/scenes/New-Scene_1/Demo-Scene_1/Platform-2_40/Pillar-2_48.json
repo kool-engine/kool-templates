@@ -1,0 +1,63 @@
+{
+  "id": 48,
+  "parentId": 40,
+  "settings": {
+    "name": "Pillar 2"
+  },
+  "order": 5,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MeshComponentData",
+        "shapes": [
+          {
+            "type": "de.fabmax.kool.editor.data.ShapeData.Box",
+            "size": {
+              "x": 0.35,
+              "y": 6.0,
+              "z": 0.2
+            }
+          }
+        ]
+      },
+      "displayOrder": 1
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MaterialReferenceComponentData",
+        "materialId": 51
+      },
+      "displayOrder": 2
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": 0.0026602745056152344,
+            "y": 5.104748725891113,
+            "z": 0.6941013336181641
+          },
+          "rotation": {
+            "x": 0.10661853080829413,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 0.9942999994409539
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 0.9999999011091867,
+            "z": 0.9999999011091867
+          }
+        }
+      },
+      "displayOrder": 0
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.RigidActorComponentData"
+      },
+      "displayOrder": 3
+    }
+  ]
+}

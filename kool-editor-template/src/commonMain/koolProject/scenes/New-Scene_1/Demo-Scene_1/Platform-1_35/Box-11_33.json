@@ -1,0 +1,62 @@
+{
+  "id": 33,
+  "parentId": 35,
+  "settings": {
+    "name": "Box 11"
+  },
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MeshComponentData",
+        "shapes": [
+          {
+            "type": "de.fabmax.kool.editor.data.ShapeData.Box",
+            "size": {
+              "x": 6.543999938964844,
+              "y": 0.25,
+              "z": 2.0
+            }
+          }
+        ]
+      },
+      "displayOrder": 1
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MaterialReferenceComponentData",
+        "materialId": 52
+      },
+      "displayOrder": 2
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": 0.0,
+            "y": 1.645829439163208,
+            "z": 11.608440399169922
+          },
+          "rotation": {
+            "x": 0.21263264119625092,
+            "y": -0.674379289150238,
+            "z": -0.21263256669044495,
+            "w": 0.6743792295455933
+          },
+          "scale": {
+            "x": 0.9999998211860657,
+            "y": 0.9999998211860657,
+            "z": 0.9999999403953552
+          }
+        }
+      },
+      "displayOrder": 0
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.RigidActorComponentData"
+      },
+      "displayOrder": 3
+    }
+  ]
+}

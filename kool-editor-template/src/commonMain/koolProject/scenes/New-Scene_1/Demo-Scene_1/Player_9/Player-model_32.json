@@ -1,0 +1,56 @@
+{
+  "id": 32,
+  "parentId": 9,
+  "settings": {
+    "name": "Player model"
+  },
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.ModelComponentData",
+        "modelPath": "/models/player.glb.gz",
+        "animationIndex": 0
+      },
+      "displayOrder": 1
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": -0.8999995529651439,
+            "y": 1.0728829700212569E-7,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": -0.7071068072214285,
+            "y": -0.7071067551516627,
+            "z": 4.532421131055188E-8,
+            "w": 4.5324209245059086E-8
+          },
+          "scale": {
+            "x": 0.9999997627828995,
+            "y": 0.9999997615814147,
+            "z": 0.9999997553421031
+          }
+        }
+      },
+      "displayOrder": 0
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.BehaviorComponentData",
+        "behaviorClassName": "de.fabmax.kool.app.PlayerAnimationController",
+        "propertyValues": {
+          "character": {
+            "componentRef": {
+              "entityId": 9,
+              "componentClassName": "CharacterControllerComponent"
+            }
+          }
+        }
+      },
+      "displayOrder": 2
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": 60,
+  "parentId": 5,
+  "settings": {
+    "name": "Pink lift"
+  },
+  "order": 13,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MaterialComponentData",
+        "name": "Pink lift",
+        "shaderData": {
+          "type": "de.fabmax.kool.editor.data.PbrShaderData",
+          "baseColor": {
+            "type": "de.fabmax.kool.editor.data.ConstColorAttribute",
+            "color": {
+              "r": 0.83615947,
+              "g": 0.3046157,
+              "b": 0.63080025,
+              "a": 1.0
+            }
+          },
+          "roughness": {
+            "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
+            "value": 0.5
+          },
+          "metallic": {
+            "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
+            "value": 0.0
+          },
+          "emission": {
+            "type": "de.fabmax.kool.editor.data.ConstColorAttribute",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData"
+      },
+      "displayOrder": 0
+    }
+  ]
+}

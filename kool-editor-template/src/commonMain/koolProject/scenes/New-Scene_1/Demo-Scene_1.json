@@ -1,0 +1,49 @@
+{
+  "id": 1,
+  "parentId": null,
+  "settings": {
+    "name": "Demo Scene"
+  },
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.SceneComponentData",
+        "cameraEntityId": 2
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.SceneBackgroundComponentData",
+        "sceneBackground": {
+          "type": "de.fabmax.kool.editor.data.SceneBackgroundData.Hdri",
+          "hdriPath": "/textures/hdri/syferfontein_0d_clear_1k.rgbe.png",
+          "skyLod": 2.0
+        }
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData"
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.PhysicsWorldComponentData",
+        "gravity": {
+          "x": 0.0,
+          "y": -9.8100004196167,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.SsaoComponentData",
+        "radius": 0.04,
+        "strength": 0.6999999,
+        "power": 6.0
+      },
+      "displayOrder": 0
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": 45,
+  "parentId": 1,
+  "settings": {
+    "name": "Green trigger",
+    "drawGroupId": 100
+  },
+  "order": 5,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MeshComponentData",
+        "shapes": [
+          {
+            "type": "de.fabmax.kool.editor.data.ShapeData.Box",
+            "size": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 0.5
+            }
+          }
+        ]
+      },
+      "displayOrder": 1
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MaterialReferenceComponentData",
+        "materialId": 46
+      },
+      "displayOrder": 2
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": 2.0,
+            "y": 0.6000000238418579,
+            "z": 2.0
+          },
+          "rotation": {
+            "x": 5.536615610424178E-10,
+            "y": 2.655306117974449E-19,
+            "z": 4.795900898635352E-10,
+            "w": 1.0
+          },
+          "scale": {
+            "x": 1.0000001192092896,
+            "y": 1.000000238418579,
+            "z": 1.0000001192092896
+          }
+        }
+      },
+      "displayOrder": 0
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.RigidActorComponentData",
+        "isTrigger": true
+      },
+      "displayOrder": 3
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.BehaviorComponentData",
+        "behaviorClassName": "de.fabmax.kool.app.TriggerHandler",
+        "propertyValues": {
+          "materialNameFilter": {
+            "str": "Green"
+          }
+        }
+      },
+      "displayOrder": 4
+    }
+  ]
+}

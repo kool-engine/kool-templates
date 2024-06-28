@@ -1,0 +1,33 @@
+{
+  "id": 16,
+  "parentId": 59,
+  "settings": {
+    "name": "Boxes"
+  },
+  "order": 3,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": 3.4161102771759033,
+            "y": 8.125,
+            "z": 1.7058861255645752
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          },
+          "scale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          }
+        }
+      }
+    }
+  ]
+}

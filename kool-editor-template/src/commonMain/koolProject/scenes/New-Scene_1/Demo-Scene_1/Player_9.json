@@ -1,0 +1,50 @@
+{
+  "id": 9,
+  "parentId": 1,
+  "settings": {
+    "name": "Player"
+  },
+  "order": 3,
+  "components": [
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.MaterialReferenceComponentData",
+        "materialId": 0
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.TransformComponentData",
+        "transform": {
+          "position": {
+            "x": 0.0,
+            "y": 0.899999737739563,
+            "z": 6.460483551025391
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.7071068286895752,
+            "w": 0.7071068286895752
+          },
+          "scale": {
+            "x": 0.9999999403953552,
+            "y": 0.9999999403953552,
+            "z": 1.0
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "type": "de.fabmax.kool.editor.data.CharacterControllerComponentData",
+        "shape": {
+          "radius": 0.3,
+          "length": 1.2
+        },
+        "walkSpeed": 1.5,
+        "runSpeed": 5.0
+      }
+    }
+  ]
+}
