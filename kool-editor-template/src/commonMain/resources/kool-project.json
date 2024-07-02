@@ -1,6 +1,6 @@
 {
   "meta": {
-    "modelVersion": "1.0.0"
+    "modelVersion": "1.1.0"
   },
   "scenes": [
     {
@@ -168,8 +168,13 @@
             },
             {
               "data": {
-                "type": "de.fabmax.kool.editor.data.ModelComponentData",
-                "modelPath": "/models/bunny.gltf.gz"
+                "type": "de.fabmax.kool.editor.data.MeshComponentData",
+                "shapes": [
+                  {
+                    "type": "de.fabmax.kool.editor.data.ShapeData.Model",
+                    "modelPath": "/models/bunny.gltf.gz"
+                  }
+                ]
               },
               "displayOrder": 1
             },
@@ -404,11 +409,9 @@
                       "x": 128.0,
                       "y": 128.0
                     },
-                    "common": {
-                      "uvScale": {
-                        "x": 32.0,
-                        "y": 32.0
-                      }
+                    "uvScale": {
+                      "x": 32.0,
+                      "y": 32.0
                     }
                   }
                 ]
@@ -2945,9 +2948,14 @@
           "components": [
             {
               "data": {
-                "type": "de.fabmax.kool.editor.data.ModelComponentData",
-                "modelPath": "/models/player.glb.gz",
-                "animationIndex": 0
+                "type": "de.fabmax.kool.editor.data.MeshComponentData",
+                "shapes": [
+                  {
+                    "type": "de.fabmax.kool.editor.data.ShapeData.Model",
+                    "modelPath": "/models/player.glb.gz",
+                    "animationIndex": 0
+                  }
+                ]
               },
               "displayOrder": 1
             },

@@ -2,7 +2,7 @@ package de.fabmax.kool.app
 
 import de.fabmax.kool.editor.api.KoolBehavior
 import de.fabmax.kool.editor.components.CharacterControllerComponent
-import de.fabmax.kool.editor.components.ModelComponent
+import de.fabmax.kool.editor.components.MeshComponent
 import de.fabmax.kool.math.MutableQuatF
 import de.fabmax.kool.math.QuatF
 import de.fabmax.kool.math.Vec3f
@@ -17,7 +17,7 @@ class PlayerAnimationController : KoolBehavior() {
     var character: CharacterControllerComponent? = null
 
     private var initOrientation = QuatF.IDENTITY
-    private val modelComponent by lazy { gameEntity.getComponent<ModelComponent>() }
+    private val meshComponent by lazy { gameEntity.getComponent<MeshComponent>() }
 
     override fun onStart() {
         val rot = MutableQuatF()
@@ -27,7 +27,7 @@ class PlayerAnimationController : KoolBehavior() {
 
     override fun onUpdate(ev: RenderPass.UpdateEvent) {
         val char = character ?: return
-        val model = modelComponent?.drawNode ?: return
+        val model = meshComponent?.drawNodeModel ?: return
 
         val transform = transform as TrsTransformF
         transform.rotation.set(initOrientation).rotate(char.moveHeading, Vec3f.Y_AXIS)

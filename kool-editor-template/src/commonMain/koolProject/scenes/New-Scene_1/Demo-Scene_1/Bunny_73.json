@@ -32,8 +32,13 @@
     },
     {
       "data": {
-        "type": "de.fabmax.kool.editor.data.ModelComponentData",
-        "modelPath": "/models/bunny.gltf.gz"
+        "type": "de.fabmax.kool.editor.data.MeshComponentData",
+        "shapes": [
+          {
+            "type": "de.fabmax.kool.editor.data.ShapeData.Model",
+            "modelPath": "/models/bunny.gltf.gz"
+          }
+        ]
       },
       "displayOrder": 1
     },

@@ -7,9 +7,14 @@
   "components": [
     {
       "data": {
-        "type": "de.fabmax.kool.editor.data.ModelComponentData",
-        "modelPath": "/models/player.glb.gz",
-        "animationIndex": 0
+        "type": "de.fabmax.kool.editor.data.MeshComponentData",
+        "shapes": [
+          {
+            "type": "de.fabmax.kool.editor.data.ShapeData.Model",
+            "modelPath": "/models/player.glb.gz",
+            "animationIndex": 0
+          }
+        ]
       },
       "displayOrder": 1
     },
