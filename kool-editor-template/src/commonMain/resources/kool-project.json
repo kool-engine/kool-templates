@@ -10,7 +10,7 @@
       "entities": [
         {
           "id": 1,
-          "parentId": null,
+          "parentId": 0,
           "settings": {
             "name": "Demo Scene"
           },
@@ -239,6 +239,12 @@
                       "x": 0.0,
                       "y": 0.75,
                       "z": 0.0
+                    }
+                  },
+                  "camera": {
+                    "componentRef": {
+                      "entityId": 2,
+                      "componentClassName": "CameraComponent"
                     }
                   }
                 }
@@ -902,7 +908,7 @@
                   },
                   "rotation": {
                     "x": -2.134799139969307E-17,
-                    "y": 6.6174449004242214E-24,
+                    "y": 6.617444900424222E-24,
                     "z": 2.1093106882279654E-22,
                     "w": 1.0
                   },
@@ -1145,7 +1151,7 @@
                   },
                   "rotation": {
                     "x": -2.1347938460133867E-17,
-                    "y": 6.6174449004242214E-24,
+                    "y": 6.617444900424222E-24,
                     "z": -2.481541837659083E-24,
                     "w": 1.0
                   },
@@ -1908,7 +1914,7 @@
                 "type": "de.fabmax.kool.editor.data.TransformComponentData",
                 "transform": {
                   "position": {
-                    "x": -2.8,
+                    "x": -3.0,
                     "y": 8.0,
                     "z": 1.4809999465942383
                   },
@@ -3006,7 +3012,7 @@
   "materials": [
     {
       "id": 5,
-      "parentId": null,
+      "parentId": 0,
       "settings": {
         "name": "materials"
       },

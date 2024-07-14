@@ -1,6 +1,6 @@
 {
   "id": 1,
-  "parentId": null,
+  "parentId": 0,
   "settings": {
     "name": "Demo Scene"
   },

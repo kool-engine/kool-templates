@@ -1,6 +1,6 @@
 {
   "id": 5,
-  "parentId": null,
+  "parentId": 0,
   "settings": {
     "name": "materials"
   },

@@ -45,6 +45,12 @@
               "y": 0.75,
               "z": 0.0
             }
+          },
+          "camera": {
+            "componentRef": {
+              "entityId": 2,
+              "componentClassName": "CameraComponent"
+            }
           }
         }
       }

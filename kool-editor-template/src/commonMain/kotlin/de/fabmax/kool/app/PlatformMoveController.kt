@@ -4,6 +4,7 @@ import de.fabmax.kool.editor.api.EditorInfo
 import de.fabmax.kool.editor.api.GameEntity
 import de.fabmax.kool.editor.api.KoolBehavior
 import de.fabmax.kool.editor.components.RigidActorComponent
+import de.fabmax.kool.editor.components.localToGlobalF
 import de.fabmax.kool.math.Mat4f
 import de.fabmax.kool.math.MutableVec3f
 import de.fabmax.kool.math.clamp
@@ -34,8 +35,8 @@ class PlatformMoveController : KoolBehavior() {
 
     override fun onPhysicsUpdate(timeStep: Float) {
         val actor = actorComponent?.rigidActor as? RigidDynamic ?: return
-        anchorA?.drawNode?.modelMatF?.getTranslation(posA) ?: return
-        anchorB?.drawNode?.modelMatF?.getTranslation(posB) ?: return
+        anchorA?.localToGlobalF?.getTranslation(posA) ?: return
+        anchorB?.localToGlobalF?.getTranslation(posB) ?: return
 
         val delta = posB - posA
         val dist = delta.length()

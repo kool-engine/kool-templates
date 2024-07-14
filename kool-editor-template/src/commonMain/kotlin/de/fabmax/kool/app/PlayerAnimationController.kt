@@ -27,7 +27,7 @@ class PlayerAnimationController : KoolBehavior() {
 
     override fun onUpdate(ev: RenderPass.UpdateEvent) {
         val char = character ?: return
-        val model = meshComponent?.drawNodeModel ?: return
+        val model = meshComponent?.sceneNode as? Model ?: return
 
         val transform = transform as TrsTransformF
         transform.rotation.set(initOrientation).rotate(char.moveHeading, Vec3f.Y_AXIS)
