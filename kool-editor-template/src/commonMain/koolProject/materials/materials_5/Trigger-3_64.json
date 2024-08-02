@@ -2,14 +2,14 @@
   "id": 64,
   "parentId": 5,
   "settings": {
-    "name": "Pink trigger"
+    "name": "Trigger 3"
   },
   "order": 14,
   "components": [
     {
       "data": {
         "type": "de.fabmax.kool.editor.data.MaterialComponentData",
-        "name": "Pink trigger",
+        "name": "Trigger 3",
         "shaderData": {
           "type": "de.fabmax.kool.editor.data.PbrShaderData",
           "baseColor": {
@@ -23,11 +23,11 @@
           },
           "roughness": {
             "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
-            "value": 0.5
+            "value": 0.2
           },
           "metallic": {
             "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
-            "value": 0.0
+            "value": 1.0
           },
           "emission": {
             "type": "de.fabmax.kool.editor.data.ConstColorAttribute",

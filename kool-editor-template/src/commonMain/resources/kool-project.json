@@ -1,6 +1,6 @@
 {
   "meta": {
-    "modelVersion": "1.1.0"
+    "modelVersion": "1.2.0"
   },
   "scenes": [
     {
@@ -908,7 +908,7 @@
                   },
                   "rotation": {
                     "x": -2.134799139969307E-17,
-                    "y": 6.617444900424222E-24,
+                    "y": 6.6174449004242214E-24,
                     "z": 2.1093106882279654E-22,
                     "w": 1.0
                   },
@@ -1151,7 +1151,7 @@
                   },
                   "rotation": {
                     "x": -2.1347938460133867E-17,
-                    "y": 6.617444900424222E-24,
+                    "y": 6.6174449004242214E-24,
                     "z": -2.481541837659083E-24,
                     "w": 1.0
                   },
@@ -3488,57 +3488,6 @@
       ]
     },
     {
-      "id": 64,
-      "parentId": 5,
-      "settings": {
-        "name": "Pink trigger"
-      },
-      "order": 14,
-      "components": [
-        {
-          "data": {
-            "type": "de.fabmax.kool.editor.data.MaterialComponentData",
-            "name": "Pink trigger",
-            "shaderData": {
-              "type": "de.fabmax.kool.editor.data.PbrShaderData",
-              "baseColor": {
-                "type": "de.fabmax.kool.editor.data.ConstColorAttribute",
-                "color": {
-                  "r": 0.90663654,
-                  "g": 0.0015755862,
-                  "b": 0.47797048,
-                  "a": 0.502454
-                }
-              },
-              "roughness": {
-                "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
-                "value": 0.5
-              },
-              "metallic": {
-                "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
-                "value": 0.0
-              },
-              "emission": {
-                "type": "de.fabmax.kool.editor.data.ConstColorAttribute",
-                "color": {
-                  "r": 0.0,
-                  "g": 0.0,
-                  "b": 0.0,
-                  "a": 1.0
-                }
-              }
-            }
-          }
-        },
-        {
-          "data": {
-            "type": "de.fabmax.kool.editor.data.TransformComponentData"
-          },
-          "displayOrder": 0
-        }
-      ]
-    },
-    {
       "id": 20,
       "parentId": 5,
       "settings": {
@@ -3690,6 +3639,57 @@
       ]
     },
     {
+      "id": 31,
+      "parentId": 5,
+      "settings": {
+        "name": "Trigger 1"
+      },
+      "order": 6,
+      "components": [
+        {
+          "data": {
+            "type": "de.fabmax.kool.editor.data.MaterialComponentData",
+            "name": "Trigger 1",
+            "shaderData": {
+              "type": "de.fabmax.kool.editor.data.PbrShaderData",
+              "baseColor": {
+                "type": "de.fabmax.kool.editor.data.ConstColorAttribute",
+                "color": {
+                  "r": 0.0,
+                  "g": 0.27230975,
+                  "b": 1.0,
+                  "a": 0.5
+                }
+              },
+              "roughness": {
+                "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
+                "value": 0.2
+              },
+              "metallic": {
+                "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
+                "value": 1.0
+              },
+              "emission": {
+                "type": "de.fabmax.kool.editor.data.ConstColorAttribute",
+                "color": {
+                  "r": 0.0,
+                  "g": 0.0,
+                  "b": 0.0,
+                  "a": 1.0
+                }
+              }
+            }
+          }
+        },
+        {
+          "data": {
+            "type": "de.fabmax.kool.editor.data.TransformComponentData"
+          },
+          "displayOrder": 0
+        }
+      ]
+    },
+    {
       "id": 46,
       "parentId": 5,
       "settings": {
@@ -3714,11 +3714,11 @@
               },
               "roughness": {
                 "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
-                "value": 0.1
+                "value": 0.2
               },
               "metallic": {
                 "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
-                "value": 0.0
+                "value": 1.0
               },
               "emission": {
                 "type": "de.fabmax.kool.editor.data.ConstColorAttribute",
@@ -3741,31 +3741,31 @@
       ]
     },
     {
-      "id": 31,
+      "id": 64,
       "parentId": 5,
       "settings": {
-        "name": "Trigger"
+        "name": "Trigger 3"
       },
-      "order": 6,
+      "order": 14,
       "components": [
         {
           "data": {
             "type": "de.fabmax.kool.editor.data.MaterialComponentData",
-            "name": "Trigger",
+            "name": "Trigger 3",
             "shaderData": {
               "type": "de.fabmax.kool.editor.data.PbrShaderData",
               "baseColor": {
                 "type": "de.fabmax.kool.editor.data.ConstColorAttribute",
                 "color": {
-                  "r": 0.0,
-                  "g": 0.27230975,
-                  "b": 1.0,
-                  "a": 0.5
+                  "r": 0.90663654,
+                  "g": 0.0015755862,
+                  "b": 0.47797048,
+                  "a": 0.502454
                 }
               },
               "roughness": {
                 "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
-                "value": 0.1
+                "value": 0.2
               },
               "metallic": {
                 "type": "de.fabmax.kool.editor.data.ConstValueAttribute",

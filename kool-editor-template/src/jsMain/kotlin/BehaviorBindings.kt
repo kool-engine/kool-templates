@@ -1,4 +1,8 @@
-import de.fabmax.kool.app.*
+import de.fabmax.kool.app.CharacterCameraRig
+import de.fabmax.kool.app.OrbitCameraRig
+import de.fabmax.kool.app.PlatformMoveController
+import de.fabmax.kool.app.PlayerAnimationController
+import de.fabmax.kool.app.TriggerHandler
 import de.fabmax.kool.editor.AppBehavior
 import de.fabmax.kool.editor.BehaviorProperty
 import de.fabmax.kool.editor.BehaviorPropertyType

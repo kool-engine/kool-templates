@@ -12,7 +12,8 @@ fun main() = KoolApplication(
     KoolConfigJvm(
         windowTitle = "Kool Editor",
         showWindowOnStart = false,
-        isNoTitleBar = OsInfo.isWindows
+        isNoTitleBar = OsInfo.isWindows,
+        windowNotFocusedFrameRate = 4
     )
 ) {
     // by default editor working dir is in $projectDir/.editor -> project root path is the parent directory

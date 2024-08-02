@@ -23,11 +23,11 @@
           },
           "roughness": {
             "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
-            "value": 0.1
+            "value": 0.2
           },
           "metallic": {
             "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
-            "value": 0.0
+            "value": 1.0
           },
           "emission": {
             "type": "de.fabmax.kool.editor.data.ConstColorAttribute",

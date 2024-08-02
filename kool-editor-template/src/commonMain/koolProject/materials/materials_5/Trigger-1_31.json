@@ -2,14 +2,14 @@
   "id": 31,
   "parentId": 5,
   "settings": {
-    "name": "Trigger"
+    "name": "Trigger 1"
   },
   "order": 6,
   "components": [
     {
       "data": {
         "type": "de.fabmax.kool.editor.data.MaterialComponentData",
-        "name": "Trigger",
+        "name": "Trigger 1",
         "shaderData": {
           "type": "de.fabmax.kool.editor.data.PbrShaderData",
           "baseColor": {
@@ -23,7 +23,7 @@
           },
           "roughness": {
             "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
-            "value": 0.1
+            "value": 0.2
           },
           "metallic": {
             "type": "de.fabmax.kool.editor.data.ConstValueAttribute",
