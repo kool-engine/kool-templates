@@ -10,6 +10,6 @@ fun main() = KoolApplication(
     config = KoolConfigJs(
         canvasName = "glCanvas"
     )
-) { ctx ->
+) {
     launchApp(ctx)
 }

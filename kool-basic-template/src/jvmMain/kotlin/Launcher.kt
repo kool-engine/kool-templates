@@ -10,6 +10,6 @@ fun main() = KoolApplication(
     config = KoolConfigJvm(
         windowTitle = "kool Template App"
     )
-) { ctx ->
+) {
     launchApp(ctx)
 }
